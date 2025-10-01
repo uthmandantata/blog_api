@@ -27,7 +27,8 @@ blog_api/
 │   │-- middleware/      # Protect & isAdmin middlewares
 │   │-- models/          # Mongoose models (User, Post)
 │   │-- routes/          # Express routes (Auth, User, Post, Admin)
-│   │-- server.js        # App entry point
+|   │-- utis/            # Token
+│   │-- index.js        # App entry point
 │-- package.json
 │-- .env (ignored)
 │-- README.md
@@ -88,12 +89,14 @@ blog_api/
 | DELETE | /api/posts/:id | Delete post (owner/admin only)|
 
 ### 🛡️ Admin
-| Method | Endpoint              | Description      |
-|--------|-----------------------|------------------|
-| GET    | /api/admin/users      | Get all users    |
-| PUT    | /api/admin/ban/:id    | Ban a user       |
-| DELETE | /api/admin/posts/:id  | Delete a post    |
-| GET    | /api/admin/stats      | View stats       |
+| Method | Endpoint                   | Description      |
+|--------|----------------------------|------------------|
+| GET    | /api/admin/users           | Get all users    |
+| GET    | /api/admin/admin-dashboard | Admin Dashboard  |
+| POST   | /api/admin/create-admin    | Create an Admin  |
+| PUT    | /api/admin/ban/:id         | Ban a user       |
+| DELETE | /api/admin/delete-user/:id | Delete a User    |
+
 
 ---
 
